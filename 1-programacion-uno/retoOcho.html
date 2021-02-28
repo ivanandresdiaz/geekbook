@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="retoOcho.css">
+</head>
+<body>
+    <button id="buttonLeft" onclick="esconderDerecha()"class="button">Esconder Derecha</button>
+    <button id="buttonRight" onclick="esconderIzquierda()" class="button">Esconder Izquierda</button>
+    <script>
+        const buttonLeft=document.getElementById('buttonLeft');
+        const buttonRight=document.getElementById('buttonRight');
+        function esconderDerecha(){
+            buttonRight.classList.add('hidden');
+            setTimeout(function(){
+                buttonRight.style.display="none";
+                setTimeout(()=>{
+                buttonRight.style.display="block";
+                setTimeout(()=>{
+                    buttonRight.classList.remove('hidden');
+                },500)
+                
+                },500)
+            },600)
+        }
+        function esconderIzquierda(){
+            buttonLeft.classList.add('hidden');
+            setTimeout(function(){
+                buttonLeft.style.display="none";
+                setTimeout(()=>{
+                buttonLeft.style.display="block";
+                setTimeout(()=>{
+                    buttonLeft.classList.remove('hidden');
+                },500)
+                },500)
+            },500)
+        }
+    </script>
+</body>
+</html>

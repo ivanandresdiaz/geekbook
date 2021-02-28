@@ -1,0 +1,32 @@
+.main {
+    background-color: pink;
+  }
+  
+  .main__title {
+    color: red;
+  }
+
+.animado{
+    position: relative;
+    top: 0px;
+    left: 0;
+    color: blue;
+    animation-name: ola;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count:5;
+    transform-origin: center center;
+    transform:scale(2);
+    background-color: white;
+}
+@keyframes ola{
+    0%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}

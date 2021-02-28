@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+.notificacion{
+    padding: 30px;
+    background-color: black;
+    color: blanchedalmond;
+    opacity: 0.8;
+    border: white solid 2px;
+    border-radius:25px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.success{
+    border: 5px solid darkgreen;
+    background-color: darkseagreen;
+    color: darkgreen;
+}
+.error{
+    border: 5px solid darkred;
+    background-color: tomato;
+    color: darkred;
+}
+.warning{
+    border: 5px solid darkgoldenrod ;
+    background-color: burlywood;
+    color: darkgoldenrod;
+}

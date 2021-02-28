@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nombre de estudiantes</h1>
+    <ul id="lista">
+
+    </ul>
+    <button id="button">Agregar 1 estudiante</button>
+    <script>
+        const container= document.querySelector('#lista');
+        const button=document.querySelector('#button');
+        const newText=addStudents();
+        button.addEventListener('click',(event)=>{
+            console.log(event);
+            newText.next();
+        })
+        function* addStudents(){
+            const text1= document.createElement('p');
+            text1.textContent="texto 1";
+            container.append(text1);
+            yield;
+            const text2= document.createElement('p');
+            text2.textContent="texto 2";
+            container.append(text2);
+            yield;
+            const text3= document.createElement('p');
+            text3.textContent="texto 3";
+            container.append(text3);
+            button.setAttribute('disabled','disabled');
+            yield;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <label for="">Escribe tu fecha de Nacimiento</label>
+    <input id="input" type="date">
+    <button id="button">¿Cuantas horas he vivido?</button>
+</body>
+<script>
+const body=document.getElementById('body');
+var fechaNacimiento;
+
+const button=document.querySelector('#button');
+button.addEventListener('click',()=>{
+    const date=fechaNacimiento.split('-');
+    const listoParaConvertirObjeto=date.map((date)=>{
+        return parseInt(date);
+    });
+    const listoParaRestar={
+        anio:listoParaConvertirObjeto[0],
+        mes:listoParaConvertirObjeto[1],
+        dia:listoParaConvertirObjeto[2]
+    }
+    const horasVividas=cuantosHorasHeVivido(fechaHoy,listoParaRestar)
+    const elementoInsertar=document.createElement('p');
+    const texto=document.createTextNode(horasVividas);
+    elementoInsertar.appendChild(texto);
+    body.appendChild(elementoInsertar);
+})
+const input=document.getElementById('input');
+input.addEventListener('blur',(event)=>{
+    console.log(event.target.value);
+    fechaNacimiento=event.target.value;
+})
+const fechaHoy={
+anio:2021,
+mes:2,
+dia:28
+}
+const ivan ={
+anio:1997,
+mes:8,
+dia:31
+}
+function cuantosHorasHeVivido(fechaHoy,ivan){
+const anios =(fechaHoy.anio-ivan.anio)*12*30*24;
+const meses=(fechaHoy.mes-ivan.mes)*30*24;
+const dia=(fechaHoy.dia-ivan.dia)*24;
+const horasVividas=anios+meses+dia;
+return horasVividas
+}
+cuantosHorasHeVivido(fechaHoy,ivan);
+
+</script>
+</html>

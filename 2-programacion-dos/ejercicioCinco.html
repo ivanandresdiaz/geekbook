@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const fechaHoy={
+ano:2021,
+mes:2,
+dia:28
+}
+const ivan ={
+ano:1997,
+mes:8,
+dia:31
+}
+function cuantosHorasHeVivido(fechaHoy,ivan){
+const anos =(fechaHoy.ano-ivan.ano)*12*30*24;
+const meses=(fechaHoy.mes-ivan.mes)*30*24;
+const dia=(fechaHoy.dia-ivan.dia)*24;
+const horasVividas=anos+meses+dia;
+console.log(horasVividas);
+}
+cuantosHorasHeVivido(fechaHoy,ivan);
+
+</script>
+</html>

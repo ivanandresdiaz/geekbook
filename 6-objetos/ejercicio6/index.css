@@ -1,0 +1,12 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    margin: 10px;
+}

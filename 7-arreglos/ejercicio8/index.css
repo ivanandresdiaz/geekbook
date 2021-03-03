@@ -1,0 +1,52 @@
+.padre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+ul{
+    padding: 0;
+}
+li{
+    position: relative;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 400px;
+    height: 30px;
+    text-decoration: none;
+    border: 1px solid gray;
+    background-color: rgb(208, 208, 211);
+    border-radius: 25px;
+}
+small{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.strike{
+    text-decoration: line-through;
+    border: 1px solid green;
+    background-color: lavender;
+    border-radius: 25px;
+}
+.checkbox{
+position: absolute;
+top: 7px;
+right: 16px;
+height:20px;
+width: 20px;
+}
